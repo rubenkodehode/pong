@@ -1,14 +1,22 @@
-export class Player {
-  constructor(name) {
-    this.name = name;
-    this.score = 0;
+class Controls {
+  constructor() {
+    this.keysPressed = {};
+
+    document.addEventListener("keydown", (e) => this.keyDown(e));
+    document.addEventListener("keyup", (e) => this.keyUp(e));
   }
 
-  incrementScore() {
-    this.score += 1;
+  keyDown(e) {
+    this.keysPressed[e.key] = true;
   }
 
-  resetScore() {
-    this.score = 0;
+  keyUp(e) {
+    this.keysPressed[e.key] = false;
+  }
+
+  isKeyPressed(key) {
+    return !!this.keysPressed[key];
   }
 }
+
+export default Controls;
