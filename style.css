@@ -1,0 +1,94 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: black;
+}
+
+#board {
+  position: relative;
+  width: 800px;
+  height: 400px;
+  background-color: black;
+  border: 2px solid white;
+  overflow: hidden;
+}
+
+#player1,
+#player2 {
+  position: absolute;
+  width: 10px;
+  height: 100px;
+  background-color: white;
+}
+
+#player1 {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#player2 {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#centerLine {
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: white;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#ball {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#scorePlayer1,
+#scorePlayer2 {
+  margin: 0 20px;
+}
+
+#winner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  color: white;
+  font-family: Arial, sans-serif;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  z-index: 10;
+}
+
+.hidden {
+  display: none;
+}
+
+#restart {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
